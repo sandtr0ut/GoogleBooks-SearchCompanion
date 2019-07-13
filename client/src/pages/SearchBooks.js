@@ -51,7 +51,7 @@ class SearchBooks extends Component {
       .catch(err => this.setState({ error: err.items }));
   };
 
-  handleSavedButton = event => {
+  handleSaveBtn = event => {
     // console.log(event)
     console.log(this.state.books);
     let savedBooks = this.state.books.filter(
@@ -83,7 +83,7 @@ class SearchBooks extends Component {
         <Container>
           <SearchResult
             books={this.state.books}
-            handleSavedButton={this.handleSavedButton}
+            handleSaveBtn={this.handleSaveBtn}
           />
         </Container>
       </Container>
