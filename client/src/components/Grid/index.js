@@ -1,11 +1,13 @@
 import React from 'react';
 
-// Names Bootstrap caontainer fluid if it is
-export default function Container({ fluid, children }) {
+// Exporting the Container, Row, and Col components from this file
+
+// This Container component allows us to use a bootstrap container without worrying about class names
+export function Container({ fluid, children }) {
   return <div className={`container${fluid ? '-fluid' : ''}`}>{children}</div>;
 }
 
-// Names Bootstrap row fluid if it is
+// This Row component lets us use a bootstrap row without having to think about class names
 export function Row({ fluid, children }) {
   return <div className={`row${fluid ? '-fluid' : ''}`}>{children}</div>;
 }
